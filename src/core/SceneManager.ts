@@ -298,6 +298,7 @@ export class SceneManager {
         const size = screenSizeCalculator.CalculateSize(avlSize, aspect);
         this.app.renderer.resize(size.x, size.y);
         const scale = screenSizeCalculator.CalculateScale(size);
+        console.warn('SceneManager.onResize: size:', size.x, size.y, 'scale:', scale.x, scale.y);
         this.masterContainer.scale.set(scale.x, scale.y);
     }
 
